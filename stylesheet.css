@@ -1,0 +1,181 @@
+// Variables
+$apolloblue: #007AFF;
+$purple: #6C5EFF;
+$lpurple: #F4F3F9;
+$medblue: #5379FF;
+$lightblue: #2DA3FF;
+$lgrey: #7F7F82;
+$dgrey: #6F6F6F;
+$nightmode: #21252E;
+
+
+// Media Query Mixins
+$small-width: 550px;  // Phone
+$medium-width: 768px; // Tablet
+$large-width: 1024px; // Desktop
+
+
+@mixin small-down {
+  @media (max-width: #{$small-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin small-up {
+  @media (min-width: #{$small-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin small-only {
+  @media (max-width: #{$medium-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin medium-only {
+  @media (min-width: #{$medium-width}) and (max-width: #{$large-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin medium-up {
+  @media (min-width: #{$medium-width}) {
+    @content;
+  }
+}
+
+@mixin large-up {
+  @media (min-width: #{$large-width}) {
+    @content;
+  }
+}
+
+
+* { margin: 0; padding: 0; box-sizing: border-box; 
+	transition: all 0.5s ease; }
+
+::-moz-selection { color: #fff; background: $apolloblue; }
+::selection { color: #fff;  background: $apolloblue; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-size: 16px; margin: auto;
+}
+
+h1 { font-size: 2.18rem; margin-bottom: 0.2em; font-weight: 600;
+	@include medium-up { font-size: 3.8rem; } }
+h2 { font-size: 1.5rem; font-weight: 600; margin: 40px 0 20px 0; }
+h3 { font-size: 0.875rem; text-transform: uppercase; color: $dgrey; text-align: center; padding: 0 0 20px 0; }
+p { font-size: 1rem; line-height: 1.5; @include medium-up { font-size: 1.125rem; } }
+
+
+#moon-toggle { position: absolute; right: 15px; top: 15px; 
+	&:hover { cursor: pointer; }
+}
+
+header {
+	display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 0 20px; margin-top: 40px;
+	.header-icon {
+		display: block;
+		@include small-down { width: 100px; height: 100px; img { width: 100%; } }
+		@include medium-up { width: 200px; height: 200px; img { width: 100%; } }
+	}
+
+	.header-info {
+		padding-left: 20px;
+		@include medium-up { padding-left: 50px; }
+		p { color: $lgrey; font-size: 1.125rem; 
+			@include small-down { font-size: 0.9rem; } 
+		}
+	}
+}
+
+.intro-text { 
+	margin: 40px auto;
+	@include small-only { padding-left: 20px; padding-right: 20px; }
+	@include medium-up { max-width: 660px;  }
+}
+
+.download-button { text-align: center; img { width: 200px; @include medium-up { width: 250px; } } }
+
+.main { 
+	.etc { text-align: center; font-style: italic; }	
+	
+	#video-preview { max-width: 900px; margin: 40px auto; &:hover { cursor: pointer;} }
+
+	#features {
+		.feature:not(.ipad) {
+			padding: 0 20px 40px; 
+			@include medium-up { margin: 200px 0; }
+			.feature-inner {
+				max-width: 900px; position: relative; margin: auto;
+				display: flex; min-height: 400px;
+				@include small-down { flex-direction: column; }
+				.feature-img { max-width: 300px; margin: 20px auto; flex-grow: 1; flex-basis: 0; 
+					img { 
+						width: 100%;
+						@include medium-up { max-width: 300px; position: absolute; top: -23%; } 
+					}
+				}
+				.feature-text { flex-grow: 1; flex-basis: 0; align-self: center; }
+			}
+
+			&:nth-child(even) { 
+				background: #f9f9f9; 
+				@include small-up { .feature-text { order: 2; padding-left: 40px; } }
+			}
+			&:nth-child(odd) {
+				@include small-up { .feature-text { padding-right: 40px; } }
+			}
+		
+			
+		}
+		.ipad {
+			padding: 0 20px 40px;
+			@include medium-up { margin: 230px 0 230px; }
+			.feature-inner { 
+				display: flex; position: relative;  max-width: 900px; position: relative; margin: auto; flex-direction: column;
+				@include medium-up { flex-direction: row; }
+				.feature-text { flex-grow: 1; flex-basis: 0; padding-right: 40px; }
+				.feature-img { max-width: 400px; margin: 20px auto; 
+					@include medium-up { flex-grow: 2; flex-basis: 0; }
+					img { 
+						width: 100%;
+						@include medium-up { max-width: 400px; position: absolute; top: -23%; } 
+					}
+				}
+			}
+			
+		}
+	}
+}
+
+.support {
+	display: flex; justify-content: center; align-items: center;
+	min-height: 100vh; padding: 20px;
+	p { max-width: 400px; background: #F4F3F9; padding: 40px; border-radius: 8px;
+		a { color: $apolloblue; &:hover { color: $purple; } }
+	}
+	
+}
+
+footer {
+	margin: 50px 0; text-align: center; clear: both;
+	a { 
+		color: #A9A9A9; text-decoration: none; 
+		@include small-down { display: block; text-align: center; line-height: 2; }
+		@include small-up { &:not(:last-child) { margin-right: 6%; } }
+		&:hover { text-decoration: underline; }
+	}
+}
+
+// Night mode
+.night-mode {
+	background: $nightmode;
+	h1, p { color: white; }
+	h2 { color: $medblue; }
+	.header-info p { opacity: 0.7; }
+	h3 { color: $lgrey; }
+	#moon-toggle { opacity: 0.4; }
+	.main #features .feature:nth-child(even) { background: #30333E; }
+}
