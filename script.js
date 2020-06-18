@@ -5,4 +5,4 @@ $(document).ready(function(){
     	return false;
     });
 
-    $("#video-preview").fitVids();
+$("#video-preview").fitVids();}
