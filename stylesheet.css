@@ -7,12 +7,12 @@
 
 ::-moz-selection {
   color: #fff;
-  background: #007AFF;
+  background: #e91212;
 }
 
 ::selection {
   color: #fff;
-  background: #007AFF;
+  background: #AF00FF;
 }
 
 body {
@@ -229,8 +229,16 @@ header .header-info p {
   align-self: center;
 }
 
-.main #features .feature:not(.ipad):nth-child(even) {
-  background: #f9f9f9;
+.main #features .feature:not(.ipad):nth-child(2) {
+  background: #d6d6ff;
+}
+
+.main #features .feature:not(.ipad):nth-child(4) {
+  background: #f2d6ff;
+}
+
+.main #features .feature:not(.ipad):nth-child(6) {
+  background: #d6f2ff;
 }
 
 @media (min-width: 549px) {
@@ -355,7 +363,7 @@ footer a:hover {
 }
 
 .night-mode {
-  background: #21252E;
+  background: #050510;
 }
 
 .night-mode h1, .night-mode p {
@@ -363,7 +371,7 @@ footer a:hover {
 }
 
 .night-mode h2 {
-  color: #5379FF;
+  color: #AF00FF;
 }
 
 .night-mode .header-info p {
@@ -378,8 +386,14 @@ footer a:hover {
   opacity: 0.4;
 }
 
-.night-mode .main #features .feature:nth-child(even) {
-  background: #30333E;
+.night-mode .main #features .feature:nth-child(2) {
+  background: #0D0D28;
 }
 
-/*# sourceMappingURL=style.css.map */
+.night-mode .main #features .feature:nth-child(4) {
+  background: #1C0029;
+}
+
+.night-mode .main #features .feature:nth-child(6) {
+  background: #001b28;
+}
