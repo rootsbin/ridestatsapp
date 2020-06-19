@@ -5,20 +5,29 @@
   transition: all 0.5s ease;
 }
 
+ h1, p {
+  color: white;
+}
+
+h2 {
+  color: #AF00FF;
+}
+
 ::-moz-selection {
   color: #fff;
-  background: #e91212;
+  background: #484848;
 }
 
 ::selection {
   color: #fff;
-  background: #AF00FF;
+  background: #484848;
 }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   margin: auto;
+  background: #242424;
 }
 
 h1 {
@@ -58,13 +67,15 @@ p {
   }
 }
 
-#moon-toggle {
+#sun-toggle {
   position: absolute;
-  right: 15px;
-  top: 15px;
+  right: 10px;
+  top: 10px;
+  width: 50;
+  width: 50;
 }
 
-#moon-toggle:hover {
+#sun-toggle:hover {
   cursor: pointer;
 }
 
@@ -103,8 +114,10 @@ header .header-icon {
     width: 200px;
     height: 200px;
   }
+  
   header .header-icon img {
     width: 100%;
+	border-radius: 36px;
   }
 }
 
@@ -119,7 +132,7 @@ header .header-info {
 }
 
 header .header-info p {
-  color: #7F7F82;
+  color: #747470;
   font-size: 1.125rem;
 }
 
@@ -212,6 +225,7 @@ header .header-info p {
 }
 
 .main #features .feature:not(.ipad) .feature-inner .feature-img img {
+  border-radius: 15px;
   width: 100%;
 }
 
@@ -229,16 +243,16 @@ header .header-info p {
   align-self: center;
 }
 
-.main #features .feature:not(.ipad):nth-child(2) {
-  background: #d6d6ff;
+.main #features .feature:nth-child(2) {
+  background: #0D0D28;
 }
 
-.main #features .feature:not(.ipad):nth-child(4) {
-  background: #f2d6ff;
+.main #features .feature:nth-child(4) {
+  background: #1C0029;
 }
 
-.main #features .feature:not(.ipad):nth-child(6) {
-  background: #d6f2ff;
+.main #features .feature:nth-child(6) {
+  background: #001b28;
 }
 
 @media (min-width: 549px) {
@@ -303,7 +317,8 @@ header .header-info p {
 
 @media (min-width: 768px) {
   .main #features .ipad .feature-inner .feature-img img {
-    max-width: 400px;
+	border-radius: 12px;
+    max-width: 650px;
     position: absolute;
     top: -23%;
   }
@@ -362,38 +377,48 @@ footer a:hover {
   text-decoration: underline;
 }
 
-.night-mode {
-  background: #050510;
+.light-mode {
+  background: #e2e2e2;
 }
 
-.night-mode h1, .night-mode p {
-  color: white;
+.light-mode::-moz-selection {
+  color: #000;
+  background: #d0d0d0;
 }
 
-.night-mode h2 {
-  color: #AF00FF;
+.light-mode ::selection {
+  color: #000;
+  background: #d0d0d0;
 }
 
-.night-mode .header-info p {
-  opacity: 0.7;
+.light-mode h1, .light-mode p {
+  color: black;
 }
 
-.night-mode h3 {
+.light-mode h2 {
+  color: black;
+}
+
+.light-mode .header-info p {
+  opacity: 0.9;
+}
+
+.light-mode h3 {
   color: #7F7F82;
 }
 
-.night-mode #moon-toggle {
-  opacity: 0.4;
+.light-mode #sun-toggle {
+  opacity: 0.7;
 }
 
-.night-mode .main #features .feature:nth-child(2) {
-  background: #0D0D28;
+.light-mode .main #features .feature:not(.ipad):nth-child(2) {
+  background: #d6d6ff;
 }
 
-.night-mode .main #features .feature:nth-child(4) {
-  background: #1C0029;
+.light-mode .main #features .feature:not(.ipad):nth-child(4) {
+  background: #f2d6ff;
 }
 
-.night-mode .main #features .feature:nth-child(6) {
-  background: #001b28;
+.light-mode .main #features .feature:not(.ipad):nth-child(6) {
+  background: #d6f2ff;
 }

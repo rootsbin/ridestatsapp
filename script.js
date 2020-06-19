@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	
-    $("#moon-toggle").click(function() {
-    	$('body').toggleClass('night-mode');
+    $("#sun-toggle").click(function() {
+    	$('body').toggleClass('light-mode');
     	return false;
     });
 
