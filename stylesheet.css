@@ -99,7 +99,7 @@ header .header-icon {
   display: block;
 }
 
-@media (max-width: 549px) {
+@media (max-width: 751px) {
   header .header-icon {
     width: 100px;
     height: 100px;
