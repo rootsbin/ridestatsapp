@@ -87,7 +87,7 @@
 							<h2>Works for Ride Share and Delivery Drivers</h2>
 							<p>Build an unlimited amount of Service Cards of all different types. Track, not for only one service. But as many as you like! Start by adding a Card Name in the Edit Service Cards menu. Only the name is required!</p>
 							<p style="margin:25px auto">As a Ride Share Driver, you're paid by your Ride Min, Mile/Km Rate, Minute Rate, Base Rate and Cancel Rate. Find what these values are within the contract details of your service.</p>
-							<p>Creating Service Cards as a Hourly Deliver Driver: Enter what you are paid per delivery as the Ride Min, Base Rate and Cancel Rate. Press "Show More Options.." and enter your Hourly Pay. Being you are paid in cash at the end of your shift. Toggle Pay Out option on that page. You can then press 'Return' and then 'Start'.</p>
+							<p>As a Hourly Delivery Driver: Enter what you are paid per delivery as the Ride Min, Base Rate and Cancel Rate. Press "Show More Options.." and enter your Hourly Pay. Being you are paid in cash at the end of your shift. Toggle the 'Pay Out' option on that page. You can then press 'Return' and then 'Start' to begin calculating.</p>
 						</div>
 						<div class="feature-img">
 							<img src="assets/images/works.png">
